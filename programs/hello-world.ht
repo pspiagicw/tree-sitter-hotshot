@@ -1,0 +1,2 @@
+; this is how you write hello, world in hotshot ;
+(echo "Hello, World")
