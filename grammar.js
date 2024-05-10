@@ -33,9 +33,9 @@ module.exports = grammar({
 
     table: $ => seq('{', repeat($.returnable) ,'}'),
 
-    fdec: $ => seq('fn', field('name', $.identifier), '(', field('argument', repeat($.identifier) ),')', $.statement),
+    fdec: $ => seq('fn', field('name', $.identifier), '(', repeat(field('argument',$.identifier)) ,')', repeat($.statement)),
 
-    lambda: $ => seq('lambda', '(', repeat($.identifier) ,')', $.statement),
+    lambda: $ => seq('lambda', '(', repeat(field('argument',$.identifier)) ,')', $.statement),
 
     while: $ => seq('while', choice($.returnable), $.statement),
 

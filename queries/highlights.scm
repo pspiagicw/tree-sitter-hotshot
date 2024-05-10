@@ -2,11 +2,11 @@
 
 (fdec name: (identifier) @function)
 
+(lambda argument: (identifier) @type)
+
 (fdec argument: (identifier) @type)
 
 (let name: (identifier) @property)
-
-(expression (identifier) @property)
 
 (boolean) @constant
 (integer) @number
@@ -20,13 +20,12 @@
  "lambda"
  ] @keyword
 
-
 (comments) @comment
 
 (operator) @operator
 
 
-")" @punctuation.bracket
-"(" @punctuation.bracket
-"{" @punctuation.bracket
-"}" @punctuation.bracket
+")" @punctuation
+"(" @punctuation
+"{" @punctuation
+"}" @punctuation
